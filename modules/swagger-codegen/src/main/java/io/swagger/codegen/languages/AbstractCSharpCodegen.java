@@ -114,26 +114,26 @@ public abstract class AbstractCSharpCodegen extends DefaultCodegen implements Co
                 Arrays.asList(
                         "String",
                         "string",
-                        "bool?",
-                        "double?",
-                        "decimal?",
-                        "int?",
-                        "long?",
-                        "float?",
+                        "bool",
+                        "double",
+                        "decimal",
+                        "int",
+                        "long",
+                        "float",
                         "byte[]",
                         "ICollection",
                         "Collection",
                         "List",
                         "Dictionary",
-                        "DateTime?",
-                        "DateTimeOffset?",
+                        "DateTime",
+                        "DateTimeOffset",
                         "String",
                         "Boolean",
                         "Double",
                         "Int32",
                         "Int64",
                         "Float",
-                        "Guid?",
+                        "Guid",
                         "System.IO.Stream", // not really a primitive, we include it to avoid model import
                         "Object")
         );
@@ -147,20 +147,20 @@ public abstract class AbstractCSharpCodegen extends DefaultCodegen implements Co
         typeMapping.put("string", "string");
         typeMapping.put("binary", "byte[]");
         typeMapping.put("bytearray", "byte[]");
-        typeMapping.put("boolean", "bool?");
-        typeMapping.put("integer", "int?");
-        typeMapping.put("float", "float?");
-        typeMapping.put("long", "long?");
-        typeMapping.put("double", "double?");
-        typeMapping.put("number", "decimal?");
-        typeMapping.put("datetime", "DateTime?");
-        typeMapping.put("date", "DateTime?");
+        typeMapping.put("boolean", "bool");
+        typeMapping.put("integer", "int");
+        typeMapping.put("float", "float");
+        typeMapping.put("long", "long");
+        typeMapping.put("double", "double");
+        typeMapping.put("number", "decimal");
+        typeMapping.put("datetime", "DateTime");
+        typeMapping.put("date", "DateTime");
         typeMapping.put("file", "System.IO.Stream");
         typeMapping.put("array", "List");
         typeMapping.put("list", "List");
         typeMapping.put("map", "Dictionary");
         typeMapping.put("object", "Object");
-        typeMapping.put("uuid", "Guid?");
+        typeMapping.put("uuid", "Guid");
     }
 
     public void setReturnICollection(boolean returnICollection) {
@@ -192,8 +192,8 @@ public abstract class AbstractCSharpCodegen extends DefaultCodegen implements Co
 
     public void useDateTimeOffset(boolean flag) {
         this.useDateTimeOffsetFlag = flag;
-        if (flag) typeMapping.put("datetime", "DateTimeOffset?");
-        else typeMapping.put("datetime", "DateTime?");
+        if (flag) typeMapping.put("datetime", "DateTimeOffset");
+        else typeMapping.put("datetime", "DateTime");
     }
 
     @Override
