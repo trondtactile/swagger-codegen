@@ -4,7 +4,7 @@
     {{#generatePropertyChanged}}
     [ImplementPropertyChanged]
     {{/generatePropertyChanged}}
-    {{>visibility}} class {{classname}} : {{#parent}}{{{parent}}}, {{/parent}} IEquatable<{{classname}}>{{^netStandard}}{{#validatable}}{{/validatable}}{{/netStandard}}
+    {{>visibility}} class {{classname}} : {{#parent}}{{{parent}}}, {{/parent}} IEquatable<{{classname}}>{{^netStandard}}{{#validatable}}{{/validatable}}{{/netStandard}}, IRequestBody
     {
         {{#vars}}
         {{#items.isEnum}}
